@@ -1,1 +1,1 @@
-Generic testern main application
+Generic tester main application
