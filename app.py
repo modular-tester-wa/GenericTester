@@ -79,7 +79,8 @@ log.setLevel(logging.ERROR)
 
 
 class MainAppGui(QMainWindow):
-    sg_sync_signal_detected = pyqtSignal(int)
+    # sg_sync_signal_detected = pyqtSignal(int)
+
     start_event_detected = pyqtSignal(int)
     interrupt_event_detected = pyqtSignal(int)
     interlock_event_detected = pyqtSignal(int)
@@ -140,9 +141,11 @@ class MainAppGui(QMainWindow):
             self.start_event_detected.connect(self.btn_start_click)
             GPIO.add_event_detect(btn_start_input, GPIO.FALLING, callback=self.start_event_detected.emit, bouncetime=100)
 
+            """            
             GPIO.setup(sg_sync_signal_input, GPIO.IN)  # Set pin 21: SG sync out
             self.sg_sync_signal_detected.connect(self.sg_sync_signal_event_handler)
             GPIO.add_event_detect(sg_sync_signal_input, GPIO.RISING, callback=self.sg_sync_signal_detected.emit, bouncetime=100)
+            """
 
             GPIO.setup(signal_interlock_input, GPIO.IN, pull_up_down=GPIO.PUD_UP)  # Set pin 24: Interlock switch
             self.interlock_event_detected.connect(self.interlock_event_handler)
@@ -150,7 +153,6 @@ class MainAppGui(QMainWindow):
 
             self.is_lid_closed = (GPIO.input(signal_interlock_input) == 0)
             self.is_lid_open = (GPIO.input(signal_interlock_input) == 1)
-
 
         dlg = DialogSystemCheck()
         dlg.setWindowTitle("System check and initialisation")
@@ -743,6 +745,7 @@ class MainAppGui(QMainWindow):
     
     def interrupt_event_handler(self):
         if _platform == "linux" or _platform == "linux2":
+            print("Interrupt detected")
             GPIO.remove_event_detect(signal_interrupt_input)
             print("Interrupt relay engage! Test in progress = " + str(self.is_test_in_progress))
 
@@ -1563,7 +1566,7 @@ class MainAppGui(QMainWindow):
                         self.tmux_2_outputs[5] = False
                         self.tmux_2_outputs[6] = False
                         self.tmux_2_outputs[7] = False
-                    elif relay_name == "dut1":  # 1, 5, 7
+                    elif relay_name == "dut-1":  # 1, 5, 7
                         # self.slot = 1
                         self.tmux_2_outputs[0] = True
                         self.tmux_2_outputs[1] = False
@@ -1573,7 +1576,7 @@ class MainAppGui(QMainWindow):
                         self.tmux_2_outputs[5] = False
                         self.tmux_2_outputs[6] = True
                         self.tmux_2_outputs[7] = False
-                    elif relay_name == "dut2":  # 1, 3 ,4
+                    elif relay_name == "dut-2":  # 1, 3 ,4
                         # self.slot = 2
                         self.tmux_2_outputs[0] = True
                         self.tmux_2_outputs[1] = False
@@ -1583,7 +1586,7 @@ class MainAppGui(QMainWindow):
                         self.tmux_2_outputs[5] = False
                         self.tmux_2_outputs[6] = False
                         self.tmux_2_outputs[7] = False
-                    elif relay_name == "dut3":  # 1, 3, 4, 5, 7
+                    elif relay_name == "dut-3":  # 1, 3, 4, 5, 7
                         # self.slot = 3
                         self.tmux_2_outputs[0] = True
                         self.tmux_2_outputs[1] = False
@@ -1593,7 +1596,7 @@ class MainAppGui(QMainWindow):
                         self.tmux_2_outputs[5] = False
                         self.tmux_2_outputs[6] = True
                         self.tmux_2_outputs[7] = False
-                    elif relay_name == "dut4":  # 1, 2
+                    elif relay_name == "dut-4":  # 1, 2
                         # self.slot = 4
                         self.tmux_2_outputs[0] = True
                         self.tmux_2_outputs[1] = True
