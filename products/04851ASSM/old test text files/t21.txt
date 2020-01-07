@@ -1,0 +1,40 @@
+# Test 21
+# UL DCII Fault Current
+
+	msg	Test 21
+	ron	tcb_1	V48
+	ron	tcb_2	I4
+	ron	ndb_1	pwr
+	ron	ndb_2	pwr
+	ron	ndb_3	pwr
+	ron	ndb_4	pwr
+	wait	500
+
+	sg	25d
+	wait	2100
+	wait	1000
+
+
+	slot	1
+	trip	ndb_1	t
+
+	slot	2
+	trip	ndb_2	t
+
+	slot	3
+	trip	ndb_3	t
+
+	slot	4
+	trip	ndb_4	t
+
+	end
+
+	roff	tcb_1	all
+	roff	tcb_2	all
+	roff	ndb_1	pwr
+	roff	ndb_2	pwr
+	roff	ndb_3	pwr
+	roff	ndb_4	pwr
+	wait	100
+
+#		end

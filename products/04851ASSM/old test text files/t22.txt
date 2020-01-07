@@ -1,0 +1,37 @@
+# Test 22
+# 10Idn DCI Trip Time
+
+	msg	Test 22
+	ron	tcb_1	V48
+	ron	tcb_2	I6
+	ron	ndb_1	pwr
+	ron	ndb_2	pwr
+	ron	ndb_3	pwr
+	ron	ndb_4	pwr
+
+	sg	31a	10
+	wait	2100
+	wait	1000
+
+
+	slot	1
+	trip	ndb_1	10,20
+
+	slot	2
+	trip	ndb_2	10,20
+
+	slot	3
+	trip	ndb_3	10,20
+
+	slot	4
+	trip	ndb_4	10,20
+
+	end
+
+	roff	tcb_1	all
+	roff	tcb_2	all
+	roff	ndb_1	pwr
+	roff	ndb_2	pwr
+	roff	ndb_3	pwr
+	roff	ndb_4	pwr
+	wait	100

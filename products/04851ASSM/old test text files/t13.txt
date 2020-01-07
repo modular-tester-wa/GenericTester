@@ -1,0 +1,37 @@
+# Test 13
+# Check 135 pulsating DC Trip 
+
+	ron	tcb_1	V48
+	ron	tcb_2	I6
+
+	ron	ndb_1	pwr
+	ron	ndb_2	pwr
+	ron	ndb_3	pwr
+	ron	ndb_4	pwr
+	wait	500
+
+	sg	34	50	1000
+	wait	2100
+	wait	1000
+
+	#	Get	trip	times	now
+	slot	1
+	trip	ndb_1	t
+
+	slot	2
+	trip	ndb_2	t
+
+	slot	3
+	trip	ndb_3	t
+
+	slot	4
+	trip	ndb_4	t
+
+	end
+	roff	tcb_1	all
+	roff	tcb_2	all
+	roff	ndb_1	pwr
+	roff	ndb_2	pwr
+	roff	ndb_3	pwr
+	roff	ndb_4	pwr
+	wait	100

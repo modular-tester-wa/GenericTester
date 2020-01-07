@@ -1,0 +1,50 @@
+# Test 7
+# Measure PCBA PSU Unregulated Voltage
+
+	mm	range	18.5	20.5	vdc
+	ron	tcb_1	V55
+
+	ron	ndb_1	tp-6
+	ron	ndb_1	pwr
+	ron	ndb_2	tp-6
+	ron	ndb_2	pwr
+	ron	ndb_3	tp-6
+	ron	ndb_3	pwr
+	ron	ndb_4	tp-6
+	ron	ndb_4	pwr
+
+	wait	1000
+
+	slot	1
+	ron	tmux_2	dut1
+	wait	200
+	mm	read
+
+	slot	2
+	ron	tmux_2	dut2
+	wait	200
+	mm	read
+
+	slot	3
+	ron	tmux_2	dut3
+	wait	200
+	mm	read
+
+	slot	4
+	ron	tmux_2	dut4
+	wait	200
+	mm	read
+	#pause
+
+	end
+	roff	ndb_1	pwr
+	roff	ndb_1	tp-6
+	roff	ndb_2	pwr
+	roff	ndb_2	tp-6
+	roff	ndb_3	pwr
+	roff	ndb_3	tp-6
+	roff	ndb_4	pwr
+	roff	ndb_4	tp-6
+	roff	tcb_1	voff
+	roff	tmux_2	all
+	wait	500

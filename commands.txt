@@ -1,0 +1,80 @@
+Boards names
+    tmm = 0x01
+    tsg = 0x02
+    tmux_1
+    tmux_2
+    tmux_3
+    tcb_1
+    tcb_2
+    ndb_1
+    ndb_2
+    ndb_3
+    ndb_4
+
+Commands
+    rbc board                     Read bar code board ndb_x
+    bcerr num label
+    ron ndb_4 tp-1
+    roff tcb_1 all
+    sg 21 12,55
+    rsg
+    mm 8 690,710
+    merr test2
+    :end
+    trip t
+    trip nt
+    trip p1 p2
+    terr label
+    msg ****** Test 1 DUT 1 ********
+    msg clr
+    wait 2000
+    # Test 1 end
+
+Voltage names on TCB_1
+    VOFF
+    V48         # 1
+    V55         # 1, 5, 7, 8
+    V85         # 1, 5, 7, 8, 9
+    V230        # 1, 6
+    V268L1      # 1, 2, 5, 8
+    V268L2      # 1, 3, 5, 8
+    V268L3      # 1, 4, 5, 8
+    V268        # 1, 2, 3, 4, 5, 8
+    V48m	    # 1. 10, 11
+    V268L1m     # 1, 2, 5, 8, 10, 11
+    V268L2m     # 1, 3, 5, 8, 10, 11
+    V268L3m     # 1, 4, 5, 8, 10, 11
+    V230m       # 1, 6, 11
+
+
+Fault current names on TCB_2
+    fcoff
+    idn_ac         # 2, 4, 7
+    idn_dc         # 2, 4, 7
+    10idn_dc       # 1, 5, 7, 8, 10
+    7idn_hw        # 1, 5, 7, 8, 10
+    1khz_ac        # 1, 5, 7, 8, 10
+    inr            # 1, 5, 7, 8, 10
+    10adc          # 1, 5, 6, 7, 8, 12
+
+Relays names on DUT boards
+    pwr
+    cd_1
+    cd_2
+    pmr_1
+    pmr_2
+    pmr_rst
+    gpo-1
+    gpo-2
+    test_trg
+    host_int
+    led_p
+    led_f
+    tp-1
+    tp-2
+    tp-3
+    tp-4
+    tp-5
+    tp-6
+    tp-7
+    tp-8

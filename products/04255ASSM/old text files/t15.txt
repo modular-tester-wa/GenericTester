@@ -1,0 +1,28 @@
+# Test 15
+# UL DCI Fault Current
+
+	ron tcb_1 V48
+	ron tcb_2 I4
+	ron ndb_1 pwr
+	ron ndb_2 pwr
+	wait 500
+	sg 25b
+	wait 2500	
+	wait 1500
+
+	# Check trip times now
+
+Slot 1
+	trip ndb_1 t
+
+Slot 2
+	trip ndb_2 t
+
+End
+	roff tcb_1 all
+	roff tcb_2 all
+	roff ndb_1 pwr
+	roff ndb_2 pwr
+	wait 100
+
+# end

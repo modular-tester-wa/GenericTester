@@ -1,0 +1,41 @@
+# Test 20
+# LL DCII Fault Current
+
+	msg	Test 20
+	ron	tcb_1	V48
+	ron	tcb_2	I4
+
+	ron	ndb_1	pwr
+	ron	ndb_2	pwr
+	ron	ndb_3	pwr
+	ron	ndb_4	pwr
+	wait	500
+
+	sg	25c
+	wait	2100
+	wait	1000
+
+	slot	1
+	trip	ndb_1	nt
+
+	slot	2
+	trip	ndb_2	nt
+
+	slot	3
+	trip	ndb_3	nt
+
+	slot	4
+	trip	ndb_4	nt
+
+	end
+
+	roff	tcb_1	all
+	roff	tcb_2	all
+
+	roff	ndb_1	pwr
+	roff	ndb_2	pwr
+	roff	ndb_3	pwr
+	roff	ndb_4	pwr
+	wait	100
+
+#		end

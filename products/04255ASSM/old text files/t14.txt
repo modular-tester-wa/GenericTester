@@ -1,0 +1,29 @@
+# Test 14
+# LL DCI Fault Current
+
+	ron tcb_1 V48
+	ron tcb_2 I4
+	ron ndb_1 pwr
+	ron ndb_2 pwr
+	wait 500
+
+	sg 25a
+	wait 2100
+	wait 1000
+
+	# Check trip times now
+
+Slot 1
+	trip ndb_1 nt
+
+Slot 2
+	trip ndb_2 nt
+
+End
+	roff tcb_1 all
+	roff tcb_2 all
+	roff ndb_1 pwr
+	roff ndb_2 pwr
+	wait 100
+
+# end

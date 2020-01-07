@@ -1,0 +1,824 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dlgNumInput</class>
+ <widget class="QDialog" name="dlgNumInput">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>535</width>
+    <height>641</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <property name="sizeGripEnabled">
+   <bool>true</bool>
+  </property>
+  <property name="modal">
+   <bool>false</bool>
+  </property>
+  <widget class="QPushButton" name="pb_7">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>65</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QPushButton {
+	border-style: ridge;
+     border: 2px solid DarkSlateGray;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:!enabled {
+     background-color:DarkGray;
+ }</string>
+   </property>
+   <property name="text">
+    <string>7</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="le_text">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>5</y>
+     <width>246</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QPushButton {
+	border-style: ridge;
+     border: 2px solid DarkSlateGray;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:!enabled {
+     background-color:DarkGray;
+ }</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="maxLength">
+    <number>10</number>
+   </property>
+   <property name="frame">
+    <bool>true</bool>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="readOnly">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_8">
+   <property name="geometry">
+    <rect>
+     <x>65</x>
+     <y>65</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QPushButton {
+	border-style: ridge;
+     border: 2px solid DarkSlateGray;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:!enabled {
+     background-color:DarkGray;
+ }</string>
+   </property>
+   <property name="text">
+    <string>8</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_9">
+   <property name="geometry">
+    <rect>
+     <x>125</x>
+     <y>65</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QPushButton {
+	border-style: ridge;
+     border: 2px solid DarkSlateGray;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:!enabled {
+     background-color:DarkGray;
+ }</string>
+   </property>
+   <property name="text">
+    <string>9</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_6">
+   <property name="geometry">
+    <rect>
+     <x>125</x>
+     <y>125</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QPushButton {
+	border-style: ridge;
+     border: 2px solid DarkSlateGray;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:!enabled {
+     background-color:DarkGray;
+ }</string>
+   </property>
+   <property name="text">
+    <string>6</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_5">
+   <property name="geometry">
+    <rect>
+     <x>65</x>
+     <y>125</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QPushButton {
+	border-style: ridge;
+     border: 2px solid DarkSlateGray;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:!enabled {
+     background-color:DarkGray;
+ }</string>
+   </property>
+   <property name="text">
+    <string>5</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_4">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>125</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QPushButton {
+	border-style: ridge;
+     border: 2px solid DarkSlateGray;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:!enabled {
+     background-color:DarkGray;
+ }</string>
+   </property>
+   <property name="text">
+    <string>4</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_1">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>185</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QPushButton {
+	border-style: ridge;
+     border: 2px solid DarkSlateGray;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:!enabled {
+     background-color:DarkGray;
+ }</string>
+   </property>
+   <property name="text">
+    <string>1</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_2">
+   <property name="geometry">
+    <rect>
+     <x>65</x>
+     <y>185</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QPushButton {
+	border-style: ridge;
+     border: 2px solid DarkSlateGray;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:!enabled {
+     background-color:DarkGray;
+ }</string>
+   </property>
+   <property name="text">
+    <string>2</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_3">
+   <property name="geometry">
+    <rect>
+     <x>125</x>
+     <y>185</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QPushButton {
+	border-style: ridge;
+     border: 2px solid DarkSlateGray;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:!enabled {
+     background-color:DarkGray;
+ }</string>
+   </property>
+   <property name="text">
+    <string>3</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_dot">
+   <property name="geometry">
+    <rect>
+     <x>125</x>
+     <y>245</y>
+     <width>60</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QPushButton {
+	border-style: ridge;
+     border: 2px solid DarkSlateGray;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:!enabled {
+     background-color:DarkGray;
+ }</string>
+   </property>
+   <property name="text">
+    <string>.</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_enter">
+   <property name="geometry">
+    <rect>
+     <x>185</x>
+     <y>185</y>
+     <width>66</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QPushButton {
+	border-style: ridge;
+     border: 2px solid DarkSlateGray;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:!enabled {
+     background-color:DarkGray;
+ }</string>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_0">
+   <property name="geometry">
+    <rect>
+     <x>5</x>
+     <y>245</y>
+     <width>120</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QPushButton {
+	border-style: ridge;
+     border: 2px solid DarkSlateGray;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:!enabled {
+     background-color:DarkGray;
+ }</string>
+   </property>
+   <property name="text">
+    <string>0</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_bkspc">
+   <property name="geometry">
+    <rect>
+     <x>185</x>
+     <y>65</y>
+     <width>66</width>
+     <height>121</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true"> QPushButton {
+	border-style: ridge;
+     border: 2px solid DarkSlateGray;
+     border-radius: 6px;
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #f6f7fa, stop: 1 #dadbde);
+ }
+
+ QPushButton:pressed {
+     background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 1,
+                                       stop: 0 #dadbde, stop: 1 #f6f7fa);
+ }
+
+ QPushButton:!enabled {
+     background-color:DarkGray;
+ }</string>
+   </property>
+   <property name="text">
+    <string>&lt;</string>
+   </property>
+   <property name="flat">
+    <bool>false</bool>
+   </property>
+  </widget>
+ </widget>
+ <tabstops>
+  <tabstop>pb_1</tabstop>
+  <tabstop>pb_2</tabstop>
+  <tabstop>pb_3</tabstop>
+  <tabstop>pb_4</tabstop>
+  <tabstop>pb_5</tabstop>
+  <tabstop>pb_6</tabstop>
+  <tabstop>pb_7</tabstop>
+  <tabstop>pb_8</tabstop>
+  <tabstop>pb_9</tabstop>
+  <tabstop>pb_0</tabstop>
+  <tabstop>pb_dot</tabstop>
+  <tabstop>pb_enter</tabstop>
+  <tabstop>le_text</tabstop>
+ </tabstops>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pb_1</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgNumInput</receiver>
+   <slot>pb_1_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>16</x>
+     <y>209</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>30</x>
+     <y>420</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_2</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgNumInput</receiver>
+   <slot>pb_2_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>98</x>
+     <y>215</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>106</x>
+     <y>358</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_3</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgNumInput</receiver>
+   <slot>pb_3_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>151</x>
+     <y>210</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>293</x>
+     <y>378</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_4</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgNumInput</receiver>
+   <slot>pb_4_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>18</x>
+     <y>168</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>34</x>
+     <y>386</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_5</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgNumInput</receiver>
+   <slot>pb_5_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>86</x>
+     <y>143</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>233</x>
+     <y>378</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_6</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgNumInput</receiver>
+   <slot>pb_6_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>146</x>
+     <y>156</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>294</x>
+     <y>378</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_7</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgNumInput</receiver>
+   <slot>pb_7_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>25</x>
+     <y>96</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>194</x>
+     <y>441</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_8</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgNumInput</receiver>
+   <slot>pb_8_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>93</x>
+     <y>83</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>232</x>
+     <y>378</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_9</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgNumInput</receiver>
+   <slot>pb_9_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>154</x>
+     <y>84</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>292</x>
+     <y>378</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_0</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgNumInput</receiver>
+   <slot>pb_0_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>52</x>
+     <y>301</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>55</x>
+     <y>343</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_dot</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgNumInput</receiver>
+   <slot>pb_dot_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>140</x>
+     <y>279</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>151</x>
+     <y>319</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_enter</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgNumInput</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>250</x>
+     <y>219</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>227</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pb_bkspc</sender>
+   <signal>clicked()</signal>
+   <receiver>dlgNumInput</receiver>
+   <slot>pb_bkspc_click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>227</x>
+     <y>127</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>281</x>
+     <y>136</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>pb_1_click()</slot>
+  <slot>pb_2_click()</slot>
+  <slot>pb_3_click()</slot>
+  <slot>pb_4_click()</slot>
+  <slot>pb_5_click()</slot>
+  <slot>pb_6_click()</slot>
+  <slot>pb_8_click()</slot>
+  <slot>pb_9_click()</slot>
+  <slot>pb_0_click()</slot>
+  <slot>pb_dot_click()</slot>
+  <slot>pb_7_click()</slot>
+  <slot>pb_bkspc_click()</slot>
+ </slots>
+</ui>

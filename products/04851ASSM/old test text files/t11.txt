@@ -1,0 +1,39 @@
+# Test 11
+# Measure 3 Phase supply current across shunt resistor
+
+	mm	range	75	120	mvac
+
+	ron	tcb_1	v230m
+	ron	tmux_2	shunt
+
+	wait	500
+
+	slot	1
+	ron	ndb_1	pwr
+	wait	1000
+	mm	read
+	roff	ndb_1	pwr
+
+	slot	2
+	ron	ndb_2	pwr
+	wait	1000
+	mm	read
+	roff	ndb_2	pwr
+
+	slot	3
+	ron	ndb_3	pwr
+	wait	1000
+	mm	read
+	roff	ndb_3	pwr
+
+	slot	4
+	ron	ndb_4	pwr
+	wait	1000
+	mm	read
+	roff	ndb_4	pwr
+	#pause
+
+	end
+	roff	tcb_1	voff
+	roff	tmux_2	all
+	wait	500

@@ -1,0 +1,1 @@
+pyrcc5 main_app.qrc -o main_app_rc.py

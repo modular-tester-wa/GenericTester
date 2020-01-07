@@ -1,0 +1,40 @@
+# Test 15
+# Measure 10A DC Trip Time
+
+
+	ron	tcb_1	V48
+	ron	tcb_2	I8
+	ron	ndb_1	pwr
+	ron	ndb_2	pwr
+	ron	ndb_3	pwr
+	ron	ndb_4	pwr
+	wait	500
+
+	sg	23
+	wait	2100
+	wait	1000
+
+
+	slot	1
+	trip	ndb_1	6	25
+
+	slot	2
+	trip	ndb_2	6	25
+
+	slot	3
+	trip	ndb_3	6	25
+
+	slot	4
+	trip	ndb_4	6	25
+
+	end
+
+	roff	tcb_1	all
+	roff	tcb_2	all
+	roff	ndb_1	pwr
+	roff	ndb_2	pwr
+	roff	ndb_3	pwr
+	roff	ndb_4	pwr
+	wait	200
+								
+#		end

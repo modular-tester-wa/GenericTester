@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>dlg_system_check</class>
+ <widget class="QDialog" name="dlg_system_check">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>443</width>
+    <height>188</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>System check</string>
+  </property>
+  <widget class="QLabel" name="lbl_lbl_mm_port">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>96</y>
+     <width>180</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>MM  on  port:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_mm_port">
+   <property name="geometry">
+    <rect>
+     <x>198</x>
+     <y>98</y>
+     <width>106</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>?</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_lbl_sg_port">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>134</y>
+     <width>180</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>SG  on  port:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_sg_port">
+   <property name="geometry">
+    <rect>
+     <x>198</x>
+     <y>134</y>
+     <width>106</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>?</string>
+   </property>
+  </widget>
+  <widget class="QProgressBar" name="pbProgress">
+   <property name="geometry">
+    <rect>
+     <x>106</x>
+     <y>18</y>
+     <width>118</width>
+     <height>25</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>8</number>
+   </property>
+   <property name="value">
+    <number>0</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_lbl_progress">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>10</y>
+     <width>95</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Check:</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="lbl_check_info">
+   <property name="geometry">
+    <rect>
+     <x>15</x>
+     <y>46</y>
+     <width>180</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>20</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>....</string>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+ <slots>
+  <slot>cb_current_index_change()</slot>
+  <slot>le_grn_change()</slot>
+ </slots>
+</ui>

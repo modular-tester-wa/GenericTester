@@ -1,0 +1,44 @@
+# Test 3
+	mm range 200,600 mvdc
+
+	ron tcb_1 V48
+	ron ndb_1 tp-1
+	ron ndb_1 pmr_1
+	ron ndb_1 pwr
+	ron ndb_2 tp-1
+	ron ndb_2 pmr_1
+	ron ndb_2 pwr
+	wait 1000
+
+Slot 1
+	ron tmux_2 dut1
+	wait 200
+	mm read
+
+Slot 2
+	ron tmux_2 dut2
+	wait 200
+	mm read
+
+Slot 3
+	ron tmux_2 dut3
+	wait 200
+	mm read
+
+Slot 4
+	ron tmux_2 dut4
+	wait 200
+	mm read
+
+End
+
+	roff ndb_1 pmr_1
+	roff ndb_1 tp-1
+	roff ndb_1 pwr
+	roff ndb_2 pmr_1
+	roff ndb_2 tp-1
+	roff ndb_2 pwr
+	roff tmux_2 all
+	wait 500
+
+# Test 4 end

@@ -1,0 +1,42 @@
+# Test 12
+# Measure Idn Trip Time
+
+	rsg
+# below sg 25a is just for proper setup SG,
+# for first time to pass test 12 and 15
+	sg	25a
+	wait	1000
+
+	ron	tcb_1	V48
+	ron	tcb_2	I4
+	ron	ndb_1	pwr
+	ron	ndb_2	pwr
+	ron	ndb_3	pwr
+	ron	ndb_4	pwr
+	wait	500
+
+	sg	21	50	1000
+	wait	2100
+	wait	1000
+
+# Get trip times now
+	slot	1
+	trip	ndb_1	110	180
+
+	slot	2
+	trip	ndb_2	110	180
+
+	slot	3
+	trip	ndb_3	110	180
+
+	slot	4
+	trip	ndb_4	110	180
+
+	end
+	roff	tcb_1	all
+	roff	tcb_2	all
+	roff	ndb_1	pwr
+	roff	ndb_2	pwr
+	roff	ndb_3	pwr
+	roff	ndb_4	pwr
+	wait	100

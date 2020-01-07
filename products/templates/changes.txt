@@ -1,0 +1,11 @@
+iza          self.mm_error_log_file_name = ""
+(linija 390)
+
+ubaci
+
+        self.create_new_log_files()
+
+        # from templates.t_04851_ASSM_ui import Ui_Form
+
+        ui = eval("t_" + "rcm_14_ui" + ".Ui_Frame()")
+        ui.setupUi(self.ui.template_frame)

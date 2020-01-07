@@ -1,0 +1,69 @@
+Izmjene za pymata_aio
+
+from pymata_aio.pymata3 import PyMata3
+from pymata_aio.constants import Constants
+
+iza podesavanja
+        # RPI IO and Buttons setup
+        if _platform == "linux" or _platform == "linux2":
+		
+		bla bla
+
+        else:
+            try:
+                self.ard_board = PyMata3(com_port=self.ard_com_port)
+                # board.set_pin_mode(2, Constants.ANALOG, my_callback)
+                self.ard_board.set_pin_mode(9, Constants.INPUT, self.my_callback_9)
+                self.ard_board.set_pin_mode(10, Constants.INPUT, self.my_callback_10)
+                self.ard_board.set_pin_mode(11, Constants.INPUT, self.my_callback_11)
+            except Exception as e:
+                pass
+				
+				
+	iza self.create_new_log_files() stavi self.main_loop_timer.start(0.1)
+			
+	def main_loop_timer_timer_event(self):
+		self.ard_board.sleep(0.1)
+		
+	izmjeni 
+    def interlock_event_handler(self):
+        if _platform == "linux" or _platform == "linux2":
+            sleep(0.1)
+            self.is_lid_closed = (GPIO.input(signal_interlock) == 0)
+            self.is_lid_open = (GPIO.input(signal_interlock) == 1)
+            # self.is_lid_closed = self.interlock_signal.is_pressed
+            # self.is_lid_open = not self.interlock_signal.is_pressed
+
+        self.ui.btn_start.setVisible(self.is_lid_closed)
+        if self.is_lid_closed:
+            self.set_btn_color("btn_lbl_start", 1)
+            self.ui.btn_lbl_start.setText("Press start")
+        else:
+            self.set_btn_color("btn_lbl_start", 5)
+            self.ui.btn_lbl_start.setText("Lid open")
+            self.backup_log_file()
+
+        self.ui.statusbar.showMessage("")
+        self.ui.statusbar.repaint()
+        self.repaint()	
+		
+		
+	prije def btn_start_click(self):
+	
+	    def my_callback_9(self, data):
+        # data[0] is the pin number and data[1] is the changed value
+        print("9 = ", data[1])
+        if data[1]:
+            self.btn_soft_start_click()
+
+    def my_callback_10(self, data):
+        print("Interlock = ", data[1])
+        self.is_lid_closed = (data[1] == 1)
+        self.is_lid_open = (data[1] == 0)
+        self.interlock_event_handler()
+
+    def my_callback_11(self, data):
+        # data[0] is the pin number and data[1] is the changed value
+        print("11 = ", data[1])
+		
+		

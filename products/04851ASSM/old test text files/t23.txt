@@ -1,0 +1,38 @@
+# Test 23
+# 1kHz AC Trip Time
+
+	msg	Test 24
+	ron	tcb_1	V268
+	ron	tcb_2	I6
+	ron	ndb_1	pwr
+	ron	ndb_2	pwr
+	ron	ndb_3	pwr
+	ron	ndb_4	pwr
+	wait	500
+
+	sg	26	1000	1000
+	wait	2100
+	wait	1000
+
+
+	slot	1
+	trip	ndb_1	105	230
+
+	slot	2
+	trip	ndb_2	105	230
+
+	slot	3
+	trip	ndb_3	105	230
+
+	slot	4
+	trip	ndb_4	105	230
+
+	end
+
+	roff	tcb_1	all
+	roff	tcb_2	all
+	roff	ndb_1	pwr
+	roff	ndb_2	pwr
+	roff	ndb_3	pwr
+	roff	ndb_4	pwr
+	wait	100

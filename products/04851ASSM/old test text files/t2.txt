@@ -1,0 +1,43 @@
+# Test 2: Board consuption on 48V.
+# Measure Supply Current across shunt resistor - L1 - N
+# Current is high (about 180mA) after power on,
+# then slowly (more than 1s) falling to about 100mA.
+# Therefore, MM read shold be at least 1.1s after board is power on.
+msg test 2
+
+	mm range 75,130 mvac
+
+	ron tcb_1 V48m
+	ron tmux_2 shunt
+	wait 500
+
+Slot 1
+	ron ndb_1 pwr
+	wait 1000
+	mm read
+	roff ndb_1 pwr
+
+Slot 2
+	ron ndb_2 pwr
+	wait 1000
+	mm read
+	roff ndb_2 pwr
+
+Slot 3
+	ron ndb_3 pwr
+	wait 1000
+	mm read
+	roff ndb_3 pwr
+
+Slot 4
+	ron ndb_4 pwr
+	wait 1000
+	mm read
+	roff ndb_4 pwr
+
+End
+	roff tcb_1 voff
+	roff tmux_2 all
+	wait 500
+
+# end

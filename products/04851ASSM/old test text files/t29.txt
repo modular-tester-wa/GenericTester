@@ -1,0 +1,8 @@
+print ############################
+    msg start
+    ron tcb_1 v48
+	mm 500,900 mvdc
+	mm 0.5,1 vdc
+	mm 0.5,100 vdc
+    msg stop
+print ----------------------------

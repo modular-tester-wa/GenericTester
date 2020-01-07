@@ -1,0 +1,57 @@
+# Test 3
+# Measure PCBA PSU Regulated Voltage
+
+	mm range 14.5,15.5 vdc
+	ron tcb_1 V48
+
+	ron ndb_1 tp-7
+	ron ndb_1 pwr
+	ron ndb_2 tp-7
+	ron ndb_2 pwr
+	ron ndb_3 tp-7
+	ron ndb_3 pwr
+	ron ndb_4 tp-7
+	ron ndb_4 pwr
+
+	wait 1000
+	#pause
+
+Slot 1
+	ron tmux_2 dut1
+	wait 200
+    mm read
+    #pause
+
+Slot 2
+	ron tmux_2 dut2
+	wait 200
+	mm read
+    #pause
+
+Slot 3
+	ron tmux_2 dut3
+	wait 200
+	mm read
+    #pause
+
+Slot 4
+	ron tmux_2 dut4
+	wait 200
+	mm read
+    #pause
+
+End
+
+	roff ndb_1 pwr
+	roff ndb_1 tp-7
+	roff ndb_2 pwr
+	roff ndb_2 tp-7
+	roff ndb_3 pwr
+	roff ndb_3 tp-7
+	roff ndb_4 pwr
+	roff ndb_4 tp-7
+
+	roff tmux_2 all
+	roff tcb_1 voff
+	wait 500
+# end

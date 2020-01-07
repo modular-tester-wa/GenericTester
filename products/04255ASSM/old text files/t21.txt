@@ -1,0 +1,33 @@
+# Test 21 : Is mosfet on board off after testing ? Or did we burn the board? :(
+# Check MOSFET OFF/PMR Voltage
+
+    	mm range 320,330 mvdc
+	
+	ron ndb_1 pmr_2,tp-1
+	ron ndb_2 pmr_2
+	ron ndb_2 tp-1
+
+	wait 500
+
+Slot 1
+	ron tmux_2 dut1
+	wait 200
+	mm read
+	#pause
+
+Slot 2
+	ron tmux_2 dut2
+	wait 200
+	#pause
+	mm read
+
+End
+	roff ndb_1 pmr_2
+	roff ndb_1 tp-1
+	roff ndb_2 pmr_2
+	roff ndb_2 tp-1
+	roff tmux_2 all
+        msg Test 1 end
+	wait 500
+
+# Test 21 end

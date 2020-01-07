@@ -1,0 +1,4 @@
+Com port=/dev/ttyS0
+Com port=COM11
+Com port=/dev/ttyUSB0
+Com port=/dev/ttyAMA0

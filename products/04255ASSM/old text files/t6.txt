@@ -1,0 +1,28 @@
+# Test 6
+# Meaasure L3 supply current across shunt resistor
+
+	mm range 75,120 mvac
+	
+	ron tcb_1 v268l3m
+	ron tmux_2 shunt
+
+	wait 500
+
+Slot 1
+	ron ndb_1 pwr
+	wait 1000
+	mm read
+	roff ndb_1 pwr
+
+Slot 2
+	ron ndb_2 pwr
+	wait 1000
+	mm read
+	roff ndb_2 pwr
+
+End
+	roff tcb_1 voff
+	roff tmux_2 all
+	wait 500
+
+# end
